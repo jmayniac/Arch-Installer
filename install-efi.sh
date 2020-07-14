@@ -50,5 +50,3 @@ useradd -m -G wheel,users -s /bin/bash john
 passwd john
 echo "Root password"
 passwd
-
-visudo
