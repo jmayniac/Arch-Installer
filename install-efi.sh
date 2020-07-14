@@ -59,4 +59,5 @@ mkswap /swapfile
 echo "/swapfile none swap defaults 0 0" >> /etc/fstab
 
 bootctl install
-curl -o- https://raw.githubusercontent.com/jmayniac/Arch-Installer/master/arch.conf > /boot/
+curl -o- https://raw.githubusercontent.com/jmayniac/Arch-Installer/master/arch.conf > /boot/loader/entries/arch.conf
+curl -o- https://raw.githubusercontent.com/jmayniac/Arch-Installer/master/loader.conf > /boot/loader/loader.conf
