@@ -22,7 +22,7 @@ mkfs.ext4 /dev/sda2
 mkfs.fat -F 32 /dev/sda1
 #mount boot drive
 mount /dev/sda2 /mnt
-echo "Server = http://mirrors.gigenet.com/archlinux/$repo/os/$arch" > /etc/pacman.d/mirrorlist
+echo "Server = http://mirrors.gigenet.com/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 #install pacstrap
 pacstrap /mnt base linux linux-firmware nano sudo
 #genfstab
