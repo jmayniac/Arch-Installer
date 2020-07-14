@@ -51,11 +51,4 @@ passwd john
 echo "Root password"
 passwd
 
-mkdir /boot/efi
-mount /dev/sda1 /boot/efi
-
-
-
-exit
-umount -R /mnt
-reboot
+visudo
