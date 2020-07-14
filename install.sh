@@ -22,7 +22,7 @@ mkfs.fat -F 32 /dev/nvme0n1p1
 #mount boot drive
 mount /dev/nvme0n1p2 /mnt
 mkdir /mnt/boot
-mount /dev/nvme0n1p3 /mnt/boot
+mount /dev/nvme0n1p1 /mnt/boot
 echo "Server = http://mirrors.gigenet.com/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 #install pacstrap
 pacstrap /mnt base linux linux-firmware nano sudo
