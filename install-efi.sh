@@ -1,6 +1,6 @@
 #!/bin/bash
 #formatting drive in fdisk
-sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/sda
+sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/nvme0n1
 g
 n
 
@@ -17,11 +17,11 @@ q
 EOF
 #
 #properly format main drive
-mkfs.ext4 /dev/sda2
+mkfs.ext4 /dev/nvme0n1p2
 #properly format efi
-mkfs.fat -F 32 /dev/sda1
+mkfs.fat -F 32 /dev/nvme0n1p1
 #mount boot drive
-mount /dev/sda2 /mnt
+mount /dev/nvme0n1p2 /mnt
 echo "Server = http://mirrors.gigenet.com/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 #install pacstrap
 pacstrap /mnt base linux linux-firmware nano sudo
